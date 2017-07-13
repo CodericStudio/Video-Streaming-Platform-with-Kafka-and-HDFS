@@ -29,13 +29,13 @@ public class consumerToVidToHdfs {
         String topicName = "interns_test";
         Properties props = new Properties();
         //Assign the IP of the master node to the metadata.broker.list property
-		//(6667)
+	//(6667)
         props.put("metadata.broker.list", "<hostname:portnumber>");
         //Assign the IP's of all the nodes in the cluster along with the port on which zookeeper is running to the zookepper.connect property
-		//(2181)
+	//(2181)
         props.put("zookeeper.connect", "<hostname1:portnumber>,<hostname2:portnumber>,<hostname3:portnumber>");
         //Assign the IP of the master node to the bootstrap.server property
-		//(6667)
+	//(6667)
         props.put("bootstrap.servers", "<hostname:portnumber>");
         props.put("group.id", "test");
         props.put("enable.auto.commit", "true");
