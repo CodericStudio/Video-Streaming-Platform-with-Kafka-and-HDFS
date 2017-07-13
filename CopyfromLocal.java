@@ -20,7 +20,7 @@ public class CopyfromLocal {
     	//Add Path of the core-site.xml and hdfs-site.xml on the server
     	configuration.addResource(new Path("/etc/hadoop/2.5.5.0-157/0/core-site.xml"));
     	configuration.addResource(new Path("/etc/hadoop/2.5.5.0-157/0/hdfs-site.xml"));
-		//(8020)
+	//(8020)
     	FileSystem fs = FileSystem.get(new URI("hdfs://<hostname:portnumber>"), configuration);
     	fs.copyFromLocalFile(new Path(args[0]), new Path(args[1]));
     }
