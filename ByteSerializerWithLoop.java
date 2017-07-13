@@ -32,12 +32,12 @@ public class  ByteSerializerWithLoop {
         // create instance for properties to access producer configs   
         Properties props = new Properties();
         //Assign bootstrap.servers and metadata.broker.list to the primary node in the cluster 
-		//(6667)
+	//(6667)
         props.put("bootstrap.servers", "<hostname:portname>");
-		//(6667)
+	//(6667)
         props.put("metadata.broker.list", "<hostname:portname>");
         //Assign zookeeper.connect to all the nodes in the cluster
-		//(2181)
+	//(2181)
         props.put("zookeeper.connect", "<hostname1:portname>,<hostname2:portname>,<hostname3:portname>");
         //Set acknowledgements for producer requests.      
         props.put("acks", "all");
