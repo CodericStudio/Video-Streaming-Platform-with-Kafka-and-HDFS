@@ -16,7 +16,7 @@ public class SimpleConsumer {
         String topicName = "interns_test";
         Properties props = new Properties();
         //Add the IP of the main node to the bootstrap.server property
-		//(6667)
+	//(6667)
         props.put("bootstrap.servers", "<hostname:portnumber>");
         //Group ID of the comsumer of list of consumers
         props.put("group.id", "test");
@@ -24,10 +24,10 @@ public class SimpleConsumer {
         props.put("auto.commit.interval.ms", "1000");
         props.put("session.timeout.ms", "30000");
         //Add the IP of the main node to the metadata.broker.list property
-		//(6667)
+	//(6667)
         props.put("metadata.broker.list", "<hostname:portnumber>");
         //Add the IP's of all the available nodes in the zookeeper.connect property 
-		//(2181)
+	//(2181)
         props.put("zookeeper.connect", "<hostname1:portnumber>,<hostname2:portnumber>,<hostname3:portnumber>");
         //Using a String deserializer
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class.getName());
