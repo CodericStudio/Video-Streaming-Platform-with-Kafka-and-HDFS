@@ -22,7 +22,7 @@ public class SimpleProducer {
         // create instance for properties to access producer configs   
         Properties props = new Properties();
         //Assign main node's IP to the bootstrap.servers property
-		//(6667)
+	//(6667)
         props.put("bootstrap.servers", "<hostname:portnumber>");
         //Set acknowledgements for producer requests.      
         props.put("acks", "all");
@@ -35,10 +35,10 @@ public class SimpleProducer {
         //The buffer.memory controls the total amount of memory available to the producer for buffering.   
         props.put("buffer.memory", 33554432);
         //Assign main node's IP to the metadata.broker.list property
-		//(6667)
+	//(6667)
         props.put("metadata.broker.list", "<hostname:portnumber>");
         //Assign the IP's of all the nodes in the zookeeper.connect property 
-		//(2181)
+	//(2181)
         props.put("zookeeper.connect", "<hostname1:portnumber>,<hostname2:portnumber>,<hostname3:portnumber>");
         //Using a StringSerializer to produce the messages
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,StringSerializer.class.getName());
